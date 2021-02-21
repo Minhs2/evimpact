@@ -4,12 +4,37 @@
         <title>think of a good title for this</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <script type="text/javascript" src="calc.js"></script>
+        <script type="text/javascript" src="visualizer.js"></script>
         <style>
             body {
                 height: 100vh;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
+            }
+            main>object {
+                position: fixed;
+                transform: translateX(300px);
+            }
+            @keyframes move_0 {
+                from { transform: translate(10vw, 0); }
+                to { transform: translate(-110vw, 0); }
+            }
+            @keyframes move_1 {
+                from { transform: translate(10vw, -50px); }
+                to { transform: translate(-110vw, -50px); }
+            }
+            @keyframes move_2 {
+                from { transform: translate(10vw, -100px); }
+                to { transform: translate(-110vw, -100px); }
+            }
+            @keyframes move_3 {
+                from { transform: translate(10vw, -150px); }
+                to { transform: translate(-110vw, -150px); }
+            }
+            @keyframes move_4 {
+                from { transform: translate(10vw, -200px); }
+                to { transform: translate(-110vw, -200px); }
             }
         </style>
     </head>
@@ -22,17 +47,16 @@
                 <option value="misc">some other country idfk</option>
             </select>
         </section>
-        <main class="d-flex flex-grow-1 align-items-center">
-            VISUALIZATION GOES HERE
+        <main id="vis" class="d-flex flex-grow-1 align-items-end justify-content-end w-100">
         </main>
         <section class="container">
             <div class="row">
                 <div class="col-sm text-center">
-                    <input type="range" class="form-range" id="electric" min="0" max="100" oninput="handleEChange(this.value)">
+                    <input type="range" class="form-range" id="electric" min="0" max="100" oninput="handleEChange(this.value)" onchange="resetVisualization()">
                     <label>Proportion of Electric Vehicle Adoption</label>
                 </div>
                 <div class="col-sm text-center">
-                    <input type="range" class="form-range" id="renewable" min="0" max="100" oninput="handleRChange(this.value)">
+                    <input type="range" class="form-range" id="renewable" min="0" max="100" oninput="handleRChange(this.value)" onchange="resetVisualization()">
                     <label>Proportion of Renewable-Sourced Energy</label>
                 </div>
             </div>
