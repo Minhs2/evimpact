@@ -60,6 +60,10 @@ function regionClick(country){
             e = 2;
             r = 37;
             break;
+        case 'Norway':
+            e = 17;
+            r = 99;
+            break;
     }
     resetToDefault();
     resetVisualization();
