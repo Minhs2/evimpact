@@ -35,8 +35,11 @@
                 position: fixed;
                 transform: translateX(300px);
             }
-            h3, label {
+            h3, label:not(.key) {
                 margin: 0.33em;
+            }
+            label.key {
+                transform: translateY(-0.4em)
             }
             @keyframes move_0 {
                 from { transform: translate(300px, 0); }
@@ -71,9 +74,9 @@
             </select>
         </section>
         <main class="d-flex flex-grow-1 align-items-end justify-content-end w-100">
+            <div id="bg"></div>
             <div id="highway"></div>
             <div id="vis" class="d-flex align-items-end justify-content-end"></div>
-            <div id="bg"></div>
         </main>
         <section class="container">
             <div class="row">
@@ -87,6 +90,18 @@
                     <input type="range" class="form-range" id="renewable" min="0" max="100" oninput="handleRChange(this.value)" onchange="resetVisualization()">
                     <label>Proportion of Renewable-Sourced Energy</label>
                 </div>
+            </div>
+        </section>
+        <br>
+        <section class="container">
+            <p>Key:</p>
+            <div>
+                <object data="redcar.svg" width="48px"></object>
+                <label class="key">= Gas-powered vehicle</label>
+            </div>
+            <div>
+                <object data="greencar.svg" width="48px"></object>
+                <label class="key">= Electric-powered vehicle</label>
             </div>
         </section>
     </body>
