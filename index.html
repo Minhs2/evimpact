@@ -35,6 +35,9 @@
                 position: fixed;
                 transform: translateX(300px);
             }
+            h3, label {
+                margin: 0.33em;
+            }
             @keyframes move_0 {
                 from { transform: translate(300px, 0); }
                 to { transform: translate(-110vw, 0); }
@@ -58,6 +61,7 @@
         </style>
     </head>
     <body>
+        <h3>Impact of Switching to Electric Vehicles on Carbon Dioxide Emissions</h3>
         <section class="container text-center">
             <label>Region:</label>
             <select>
@@ -74,10 +78,12 @@
         <section class="container">
             <div class="row">
                 <div class="col-sm text-center">
+                    <label id="electric_val"></label>
                     <input type="range" class="form-range" id="electric" min="0" max="100" oninput="handleEChange(this.value)" onchange="resetVisualization()">
                     <label>Proportion of Electric Vehicle Adoption</label>
                 </div>
                 <div class="col-sm text-center">
+                    <label id="renewable_val"></label>
                     <input type="range" class="form-range" id="renewable" min="0" max="100" oninput="handleRChange(this.value)" onchange="resetVisualization()">
                     <label>Proportion of Renewable-Sourced Energy</label>
                 </div>

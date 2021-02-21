@@ -19,6 +19,8 @@ function handleRChange(v) {
 }
 
 function calc() {
+    document.getElementById("electric_val").innerHTML = `${e}%`;
+    document.getElementById("renewable_val").innerHTML = `${r}%`;
     let e_100 = D*(100-r)/(100-R);
     result = e_100 + (E-e_100)*(100-e)/100;
 }
