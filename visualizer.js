@@ -9,7 +9,7 @@ function init() {
     let e = document.getElementById("electric").value;
     let gas = result / E;
     let t = Math.floor(N * (1 - gas));
-    bg.style.opacity = gas;
+    bg.style.opacity = Math.min(0.999, gas);
     for (let i = 0; i < N; ++i) {
         let speed = (4+rnd(12))*(window.innerWidth/1920);
         let obj = document.createElement("object");
