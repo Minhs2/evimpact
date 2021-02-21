@@ -10,6 +10,7 @@ let result = 0;
 
 function handleEChange(v) {
     e = v;
+    
     calc();
 }
 
