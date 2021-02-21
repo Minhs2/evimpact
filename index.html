@@ -28,6 +28,9 @@
                 width: 100%;
                 height: 250px;
             }
+            button.btn {
+                margin: 0.5em 0;
+            }
             div#vis {
                 position: fixed;
                 bottom: auto;
@@ -37,7 +40,7 @@
                 transform: translateX(300px);
             }
             h3, label:not(.key) {
-                margin: 0.33em;
+                margin: 0.33em 0;
             }
             label.key {
                 transform: translateY(-0.4em)
@@ -68,13 +71,13 @@
         <h3>Electric Vehicle Impact on CO<sub>2</sub> Emissions</h3>
         <section class="container text-center">
             <label>Country:</label>
-                <button onClick="regionClick('Can')">Canada</button>
-                <button onClick="regionClick('Chi')">China</button>
-                <button onClick="regionClick('Fra')">France</button>
-                <button onClick="regionClick('Ger')">Germany</button>
-                <button onClick="regionClick('Norway')">Norway</button>
-                <button onClick="regionClick('UK')">UK</button>
-                <button onClick="regionClick('USA')">USA</button>
+                <button class="btn btn-light" onClick="regionClick('Can')">Canada</button>
+                <button class="btn btn-light"  onClick="regionClick('Chi')">China</button>
+                <button class="btn btn-light"  onClick="regionClick('Fra')">France</button>
+                <button class="btn btn-light"  onClick="regionClick('Ger')">Germany</button>
+                <button class="btn btn-light"  onClick="regionClick('Norway')">Norway</button>
+                <button class="btn btn-light"  onClick="regionClick('UK')">UK</button>
+                <button class="btn btn-light"  onClick="regionClick('USA')">USA</button>
         </section>
         <main class="d-flex flex-grow-1 align-items-end justify-content-end w-100">
             <div id="bg"></div>
