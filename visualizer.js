@@ -13,7 +13,7 @@ function init() {
         obj.data = i < e ? "greencar.svg" : "redcar.svg";
         obj.width = 100;
         obj.style = `
-            animation: move_${Math.floor(rnd(5))} ${1+rnd(3)}s linear ${rnd(3)}s infinite;
+            animation: move_${Math.floor(rnd(5))} ${2+rnd(6)}s linear ${rnd(3)}s infinite;
             opacity: ${(i % (N/t) < 1) ? 0.25 : 1};
         `;
         vis.appendChild(obj);
