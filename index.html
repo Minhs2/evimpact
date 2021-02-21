@@ -12,7 +12,26 @@
                 align-items: center;
                 flex-direction: column;
             }
-            main>object {
+            main {
+                background-color: skyblue;
+            }
+            main>div#bg {
+                background: grey;
+                width: 100%;
+                height: 100%;
+                transition: opacity 1s;
+            }
+            main>div#highway {
+                position: absolute;
+                background-color: #353430;
+                width: 100%;
+                height: 250px;
+            }
+            div#vis {
+                position: fixed;
+                bottom: auto;
+            }
+            div#vis>object {
                 position: fixed;
                 transform: translateX(300px);
             }
@@ -47,7 +66,10 @@
                 <option value="misc">some other country idfk</option>
             </select>
         </section>
-        <main id="vis" class="d-flex flex-grow-1 align-items-end justify-content-end w-100">
+        <main class="d-flex flex-grow-1 align-items-end justify-content-end w-100">
+            <div id="bg"></div>
+            <div id="highway"></div>
+            <div id="vis" class="d-flex align-items-end justify-content-end"></div>
         </main>
         <section class="container">
             <div class="row">

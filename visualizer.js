@@ -4,9 +4,12 @@ function rnd(i) {
 
 function init() {
     let vis = document.getElementById("vis");
+    let bg = document.getElementById("bg");
     const N = 100;
     let e = document.getElementById("electric").value;
-    let t = Math.floor(N * (1 - result / E));
+    let gas = result / E;
+    let t = Math.floor(N * (1 - gas));
+    bg.style.opacity = gas;
     for (let i = 0; i < N; ++i) {
         let speed = (4+rnd(12))*(window.innerWidth/1920);
         let obj = document.createElement("object");
