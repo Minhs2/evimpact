@@ -14,7 +14,7 @@ function init() {
         obj.width = 100;
         obj.style = `
             animation: move_${Math.floor(rnd(5))} ${speed}s linear ${rnd(3)}s infinite;
-            opacity: ${(i % (N/t) < 1) ? 0.25 : 1};
+            opacity: ${(t != 0 && i % (N/t) < 1) ? 0.25 : 1};
         `;
         vis.appendChild(obj);
     }
