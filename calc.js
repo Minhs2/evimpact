@@ -62,7 +62,7 @@ function regionClick(country){
             break;
         case 'Norway':
             e = 17;
-            r = 99;
+            r = 98;
             break;
     }
     resetToDefault();
