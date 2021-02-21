@@ -38,23 +38,23 @@ function regionClick(country){
     switch(country){
         case 'Can':
             e = 1;
-            r = 28;
+            r = 82;
             break;
         case 'Chi':
             e = 1;
-            r = 13;
+            r = 25;
             break;
         case 'Fra':
             e = 1;
-            r = 12;
+            r = 93;
             break;
         case 'Ger':
             e = 1;
-            r = 17;
+            r = 64;
             break;
         case 'UK':
             e = 1;
-            r = 14;
+            r = 49;
             break;
         case 'USA':
             e = 2;
