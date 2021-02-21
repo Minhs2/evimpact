@@ -32,3 +32,35 @@ function resetToDefault() {
 }
 
 window.addEventListener("DOMContentLoaded", resetToDefault);
+
+// Function to handle the country buttons
+function regionClick(country){
+    switch(country){
+        case 'Can':
+            e = 1;
+            r = 28;
+            break;
+        case 'Chi':
+            e = 1;
+            r = 13;
+            break;
+        case 'Fra':
+            e = 1;
+            r = 12;
+            break;
+        case 'Ger':
+            e = 1;
+            r = 17;
+            break;
+        case 'UK':
+            e = 1;
+            r = 14;
+            break;
+        case 'USA':
+            e = 2;
+            r = 37;
+            break;
+    }
+    resetToDefault();
+    resetVisualization();
+}
