@@ -6,15 +6,14 @@ function init() {
     let vis = document.getElementById("vis");
     const N = 100;
     let e = document.getElementById("electric").value;
-    let t = Math.floor(100 * (1 - result / E));
-    console.log(t);
-    let test = 0;
+    let t = Math.floor(N * (1 - result / E));
     for (let i = 0; i < N; ++i) {
+        let speed = (4+rnd(12))*(window.innerWidth/1920);
         let obj = document.createElement("object");
         obj.data = i < e ? "greencar.svg" : "redcar.svg";
         obj.width = 100;
         obj.style = `
-            animation: move_${Math.floor(rnd(5))} ${4+rnd(12)}s linear ${rnd(3)}s infinite;
+            animation: move_${Math.floor(rnd(5))} ${speed}s linear ${rnd(3)}s infinite;
             opacity: ${(i % (N/t) < 1) ? 0.25 : 1};
         `;
         vis.appendChild(obj);
@@ -28,4 +27,9 @@ function resetVisualization() {
     init();
 }
 
+let timer;
+window.addEventListener("resize", () => {
+    timer && clearTimeout(timer);
+    timer = setTimeout(resetVisualization, 1000);
+});
 window.addEventListener("DOMContentLoaded", init);
